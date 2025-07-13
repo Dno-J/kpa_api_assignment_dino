@@ -1,0 +1,27 @@
+{
+	"info": {
+		"_postman_id": "264de6f2-d276-49bb-8be1-e1c220bcf4f8",
+		"name": "Kpa API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46719165",
+		"_collection_link": "https://dinojackson.postman.co/workspace/Dino-Jackson's-Workspace~7a8975a8-0bc8-45cb-829b-40412bea750c/collection/46719165-264de6f2-d276-49bb-8be1-e1c220bcf4f8?action=share&source=collection_link&creator=46719165"
+	},
+	"item": [
+		{
+			"name": "Submit Wheel Specification",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get Wheel Specification",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
