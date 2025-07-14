@@ -24,6 +24,7 @@ class WheelFields(BaseModel):
     axleBoxHousingBoreDia: Optional[str] = None
     wheelDiscWidth: Optional[str] = None
 
+
 # Request schema for POST /api/forms/wheel-specifications
 class WheelSpecificationCreate(BaseModel):
     """
@@ -33,6 +34,7 @@ class WheelSpecificationCreate(BaseModel):
     submittedBy: str
     submittedDate: date
     fields: WheelFields
+
 
 # Response schema for GET and POST responses
 class WheelSpecificationResponse(BaseModel):
@@ -44,5 +46,7 @@ class WheelSpecificationResponse(BaseModel):
     submittedDate: date
     status: str
 
-    class Config:
-        orm_mode = True  # Enables compatibility with SQLAlchemy models
+    # ✅ Pydantic v2 config
+    model_config = {
+        "from_attributes": True
+    }

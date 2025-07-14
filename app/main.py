@@ -3,6 +3,8 @@ from sqlalchemy.orm import Session
 from app import models, schemas, crud
 from app.database import engine, get_db
 from fastapi.middleware.cors import CORSMiddleware
+from typing import Optional
+from fastapi import Query
 
 # Create all tables in the database
 models.Base.metadata.create_all(bind=engine)
@@ -45,9 +47,9 @@ def submit_wheel_specification(spec: schemas.WheelSpecificationCreate, db: Sessi
 
 @app.get("/api/forms/wheel-specifications")
 def get_filtered_wheel_specifications(
-    formNumber: str,
-    submittedBy: str,
-    submittedDate: str,
+    formNumber: Optional[str] = Query(None),
+    submittedBy: Optional[str] = Query(None),
+    submittedDate: Optional[str] = Query(None),
     db: Session = Depends(get_db)
 ):
     """
