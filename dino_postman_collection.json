@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "4357cfaa-f9f6-4b4f-8735-faa45e11c848",
+		"name": "KPA-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46719165",
+		"_collection_link": "https://dinojackson.postman.co/workspace/Dino-Jackson's-Workspace~7a8975a8-0bc8-45cb-829b-40412bea750c/collection/46719165-4357cfaa-f9f6-4b4f-8735-faa45e11c848?action=share&source=collection_link&creator=46719165"
+	},
+	"item": [
+		{
+			"name": "Submit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"formNumber\": \"WHEEL-2025-001\",\r\n  \"submittedBy\": \"user_id_123\",\r\n  \"submittedDate\": \"2025-07-03\",\r\n  \"fields\": {\r\n    \"treadDiameterNew\": \"915 (900-1000)\",\r\n    \"lastShopIssueSize\": \"837 (800-900)\",\r\n    \"condemningDia\": \"825 (800-900)\",\r\n    \"wheelGauge\": \"1600 (+2,-1)\",\r\n    \"variationSameAxle\": \"0.5\",\r\n    \"variationSameBogie\": \"5\",\r\n    \"variationSameCoach\": \"13\",\r\n    \"wheelProfile\": \"29.4 Flange Thickness\",\r\n    \"intermediateWWP\": \"20 TO 28\",\r\n    \"bearingSeatDiameter\": \"130.043 TO 130.068\",\r\n    \"rollerBearingOuterDia\": \"280 (+0.0/-0.035)\",\r\n    \"rollerBearingBoreDia\": \"130 (+0.0/-0.025)\",\r\n    \"rollerBearingWidth\": \"93 (+0/-0.250)\",\r\n    \"axleBoxHousingBoreDia\": \"280 (+0.030/+0.052)\",\r\n    \"wheelDiscWidth\": \"127 (+4/-0)\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/forms/wheel-specifications",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"forms",
+						"wheel-specifications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/forms/wheel-specifications?formNumber=WHEEL-2025-001&submittedBy=user_id_123&submittedDate=2025-07-03",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"forms",
+						"wheel-specifications"
+					],
+					"query": [
+						{
+							"key": "formNumber",
+							"value": "WHEEL-2025-001"
+						},
+						{
+							"key": "submittedBy",
+							"value": "user_id_123"
+						},
+						{
+							"key": "submittedDate",
+							"value": "2025-07-03"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
